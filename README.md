@@ -10,10 +10,8 @@ This nameFlow field is MutableStateFlow
 
 For the onBindViewHolder method of recycler adapter we added logs to see the time spent to do the job. 
 
-We noticed that to bind the first element it takes enormous time 50ms to 150ms. For the following items time to time while scrolling the list we can see that 
+We noticed that to bind the first element it takes enormous time 50ms to 150ms. For the following items while scrolling the list we can see that onBindViewHolder might some times take up to 10 ms.
 
-onBindViewHolder might some times take up to 10 ms.
+We are not observing anything similar to this when MutableLiveData is used as a type for the nameFlow field. onBindViewHolder takes no more then 4ms. And the same is when nameFlow is a String object
 
-We are not observing anything similar to this when MutableLiveData is used as a type for the nameFlow field
-
-Tested on the Huawei p10 (Android 9) and Samsung Galaxy A21s
+Tested on the Huawei p10 (Android 9) and Samsung Galaxy A21s (Android 11)
