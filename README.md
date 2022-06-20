@@ -12,6 +12,8 @@ For the onBindViewHolder method of recycler adapter we added logs to see the tim
 
 We noticed that to bind the first element it takes enormous time 50ms to 150ms. For the following items while scrolling the list we can see that onBindViewHolder might some times take up to 10 ms.
 
+You can filter those logs in the Logcat using the "onBindViewHolder::" key word
+
 We are not observing anything similar to this when MutableLiveData is used as a type for the nameFlow field. onBindViewHolder takes no more then 4ms. And  when nameFlow is a String object it works fine as well
 
 Tested on the Huawei p10 (Android 9) and Samsung Galaxy A21s (Android 11)
