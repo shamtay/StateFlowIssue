@@ -9,8 +9,6 @@ import com.example.myapplication.databinding.UserItemBinding
 
 class RecyclerAdapter(private val viewModels: List<UserViewModel>, private val lifecycleOwner: LifecycleOwner): RecyclerView.Adapter<UserViewHolder>() {
 
-    private var allAmount = 0L
-    private var count = 0
     private var maxTime = 0L
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
@@ -37,8 +35,6 @@ class RecyclerAdapter(private val viewModels: List<UserViewModel>, private val l
         val time = System.currentTimeMillis()
         val result = block()
         val timeSpent = System.currentTimeMillis() - time
-        allAmount += timeSpent
-        count++
         maxTime = if (maxTime < timeSpent) {
             timeSpent
         } else {
@@ -47,7 +43,7 @@ class RecyclerAdapter(private val viewModels: List<UserViewModel>, private val l
         if (timeSpent > 4) {
             Log.d(
                 tag,
-                "$ time spent to bind = $timeSpent mls avg = ${allAmount / count} max = $maxTime "
+                "$ time spent to bind = $timeSpent mls max = $maxTime "
             )
         }
         return result
