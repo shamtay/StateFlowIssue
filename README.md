@@ -21,3 +21,7 @@ Tested on the Huawei p10 (Android 9) and Samsung Galaxy A21s (Android 11)
 In the profiler we can see next (it looks like canceling of the job is taking too much time):
 
 <img width="503" alt="Снимок экрана 2022-06-20 в 15 40 40" src="https://user-images.githubusercontent.com/10302038/174607409-26f7a439-44d0-4039-a475-074ae33cc321.png">
+
+Here is logs example:
+
+<img width="1224" alt="Снимок экрана 2022-06-20 в 16 20 44" src="https://user-images.githubusercontent.com/10302038/174610941-358f8a58-abdd-4fa9-9c94-f964a47d1a2a.png">
